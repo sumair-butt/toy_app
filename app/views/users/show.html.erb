@@ -1,15 +1,14 @@
-<h1>Show Page</h1>
-
-<p>
-  <strong>NAME:</strong>
-  <%= @user.name %>
-</p>
-
-
-<p>
-  <strong>EMAIL:</strong>
-  <%= @user.email %>
-</p>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
 
 
 <%= link_to 'Back to main menu', users_path %>
