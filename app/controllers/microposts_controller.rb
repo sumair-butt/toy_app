@@ -1,4 +1,4 @@
-class MicropostsController < ApplicationController
+  class MicropostsController < ApplicationController
   before_action :set_micropost, only: %i[ show edit update destroy ]
 
   # GET /microposts or /microposts.json
