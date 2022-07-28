@@ -3,25 +3,22 @@
 <h1>Add New User</h1>
 
 <%= form_for @user do |f| %>
-  <p>
+<%= render 'shared/error_messages' %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+    <%= f.text_field :name, class: 'form-control'%>
  
-  <p>
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </p>
+    <%= f.text_field :email, class: 'form-control' %>
   
-  <p>
     <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </p>
+    <%= f.password_field :password, class: 'form-control' %>
 
  
-  <p>
-    <%= f.submit %>
-  </p>
+    <%= f.submit "Create my account", class: "btn btn-primary" %>
+  </div>
+</div>
 <% end %>
 
 <%= link_to 'Back to main menu', users_path %>
